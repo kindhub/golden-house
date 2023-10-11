@@ -1,0 +1,213 @@
+extends ./pug/layout
+
+block content
+	<!-- START HEADER -->
+	.section.header
+		.container
+			.header__inner
+				.header__nav.nav
+					a.nav__item.anchor(href="#about") КТО МЫ
+					a.nav__item.anchor(href="#achievements") ДОСТИЖЕНИЯ
+					a.nav__item.anchor(href="#projects") ПРОЕКТЫ
+					a.nav__item.anchor(href="#vision") ВИДЕНИЕ
+					a.nav__item.anchor(href="#values") ЦЕННОСТИ
+					a.nav__item.anchor(href="#atmosphere") АТМОСФЕРА
+				+nav-btn
+	<!-- END HEADER -->
+	<!-- START FIRST-SCREEN -->
+	.section.first-screen 
+		.first-screen__inner 
+			.first-screen__social
+				a.first-screen__social-logo 
+					img.first-screen__logo-img(src="https://hhcdn.ru/ichameleon/303142.svg")
+				a.first-screen__social-link(href="https://gh.uz/" target='_blank') gh.uz
+				.first-screen__social-icons 
+					a.first-screen__social-icon(href="https://t.me/goldenhouseuz" target='_blank')  
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M0.423911 11.5716L5.95399 13.6356L8.09447 20.5194C8.23143 20.9602 8.77055 21.1232 9.12839 20.8306L12.2109 18.3177C12.5341 18.0544 12.9943 18.0413 13.332 18.2864L18.8918 22.323C19.2746 22.6012 19.8169 22.3914 19.9129 21.9289L23.9858 2.33759C24.0906 1.83231 23.5941 1.41079 23.113 1.59687L0.417431 10.3522C-0.142649 10.5682 -0.137769 11.3611 0.423911 11.5716ZM7.74951 12.5369L18.5573 5.88031C18.7516 5.76103 18.9514 6.02367 18.7846 6.17839L9.86503 14.4696C9.55151 14.7614 9.34927 15.152 9.29199 15.5759L8.98815 17.8276C8.94791 18.1282 8.52559 18.1581 8.44263 17.8671L7.27407 13.7611C7.14023 13.2928 7.33527 12.7926 7.74951 12.5369Z" fill="#272727"/>
+						</svg>
+					a.first-screen__social-icon(href="https://www.instagram.com/goldenhouseuz/?igshid=MzRlODBiNWFlZA%3D%3D" target='_blank')
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<g clip-path="url(#clip0_704_4590)">
+								<path d="M23.9765 7.05607C23.9203 5.78085 23.714 4.90416 23.4186 4.14449C23.1139 3.33812 22.645 2.61617 22.0308 2.01602C21.4306 1.40652 20.7039 0.932921 19.9069 0.632936C19.1428 0.337529 18.2707 0.131312 16.9955 0.0750879C15.7108 0.0141019 15.3029 0 12.0445 0C8.78601 0 8.37815 0.0141019 7.09818 0.0703262C5.82297 0.126551 4.94627 0.332951 4.18678 0.628174C3.38023 0.932922 2.65829 1.40176 2.05813 2.01602C1.44864 2.61617 0.975219 3.34288 0.67505 4.13991C0.379644 4.90416 0.173427 5.77609 0.117202 7.0513C0.0562161 8.33604 0.0421143 8.7439 0.0421143 12.0023C0.0421143 15.2608 0.0562161 15.6686 0.11244 16.9486C0.168665 18.2238 0.375065 19.1005 0.670472 19.8602C0.975219 20.6666 1.44864 21.3885 2.05813 21.9887C2.65829 22.5982 3.38499 23.0718 4.18202 23.3718C4.94627 23.6672 5.81821 23.8734 7.0936 23.9296C8.37339 23.986 8.78143 23.9999 12.0399 23.9999C15.2983 23.9999 15.7062 23.986 16.9862 23.9296C18.2614 23.8734 19.1381 23.6672 19.8976 23.3718C21.5105 22.7482 22.7857 21.4729 23.4093 19.8602C23.7045 19.096 23.9109 18.2238 23.9671 16.9486C24.0234 15.6686 24.0375 15.2608 24.0375 12.0023C24.0375 8.7439 24.0327 8.33604 23.9765 7.05607ZM21.8152 16.8549C21.7636 18.027 21.5667 18.6599 21.4026 19.0819C20.9993 20.1274 20.1695 20.9572 19.124 21.3605C18.702 21.5246 18.0645 21.7215 16.897 21.7729C15.6311 21.8293 15.2514 21.8433 12.0492 21.8433C8.847 21.8433 8.46258 21.8293 7.20129 21.7729C6.02918 21.7215 5.39625 21.5246 4.97429 21.3605C4.45399 21.1682 3.98038 20.8634 3.59597 20.4649C3.19745 20.0758 2.89271 19.6069 2.70041 19.0866C2.53631 18.6647 2.33944 18.027 2.28798 16.8596C2.23157 15.5937 2.21765 15.2139 2.21765 12.0117C2.21765 8.80946 2.23157 8.42505 2.28798 7.16394C2.33944 5.99183 2.53631 5.3589 2.70041 4.93694C2.89271 4.41645 3.19745 3.94303 3.60073 3.55843C3.98972 3.15992 4.45857 2.85517 4.97905 2.66306C5.40101 2.49896 6.03871 2.30209 7.20605 2.25044C8.47192 2.19422 8.85176 2.18011 12.0538 2.18011C15.2608 2.18011 15.6404 2.19422 16.9017 2.25044C18.0738 2.30209 18.7068 2.49896 19.1287 2.66306C19.649 2.85517 20.1226 3.15992 20.507 3.55843C20.9056 3.94761 21.2103 4.41645 21.4026 4.93694C21.5667 5.3589 21.7636 5.99641 21.8152 7.16394C21.8715 8.42981 21.8856 8.80946 21.8856 12.0117C21.8856 15.2139 21.8715 15.589 21.8152 16.8549Z" fill="#272727"/>
+								<path d="M12.0444 5.83707C8.64074 5.83707 5.87915 8.59847 5.87915 12.0023C5.87915 15.4062 8.64074 18.1676 12.0444 18.1676C15.4483 18.1676 18.2097 15.4062 18.2097 12.0023C18.2097 8.59847 15.4483 5.83707 12.0444 5.83707ZM12.0444 16.0016C9.83628 16.0016 8.04516 14.2107 8.04516 12.0023C8.04516 9.79402 9.83628 8.00308 12.0444 8.00308C14.2527 8.00308 16.0437 9.79402 16.0437 12.0023C16.0437 14.2107 14.2527 16.0016 12.0444 16.0016Z" fill="#272727"/>
+								<path d="M19.893 5.59333C19.893 6.38816 19.2485 7.03264 18.4535 7.03264C17.6586 7.03264 17.0142 6.38816 17.0142 5.59333C17.0142 4.79831 17.6586 4.15402 18.4535 4.15402C19.2485 4.15402 19.893 4.79831 19.893 5.59333Z" fill="#272727"/>
+							</g>
+							<defs>
+								<clipPath id="clip0_704_4590">
+									<rect width="24" height="24" fill="white"/>
+								</clipPath>
+							</defs>
+						</svg>
+					//- a.first-screen__social-icon(href="#" target='_blank')
+					//- 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					//- 		<g clip-path="url(#clip0_704_4595)">
+					//- 			<path d="M13.8587 24V13.0533H17.5316L18.0826 8.78588H13.8587V6.06176C13.8587 4.82664 14.2003 3.98492 15.9734 3.98492L18.2313 3.98399V0.167076C17.8408 0.116334 16.5005 0 14.9405 0C11.683 0 9.45282 1.98836 9.45282 5.63912V8.78588H5.7688V13.0533H9.45282V24H13.8587Z" fill="#272727"/>
+					//- 		</g>
+					//- 		<defs>
+					//- 			<clipPath id="clip0_704_4595">
+					//- 				<rect width="24" height="24" fill="white"/>
+					//- 			</clipPath>
+					//- 		</defs>
+					//- 	</svg>
+			.first-screen__content 
+				.first-screen__title GOLDEN <span>HOUSE</span>
+	<!-- END FIRST-SCREEN -->
+
+	<!-- START ABOUT -->
+	.section.about#about
+		.container 
+			.about__inner 
+				.about__title О компании
+				.about__text 
+					p Golden House - один из самых крупных и успешных девелоперов Узбекистана. 
+					p Более 13 лет на рынке. <br> Сегодня  это вертикально интегрированный холдинг полного цикла, обладающий всеми необходимыми компетенциями для реализации девелоперских проектов любой сложности.<br> В  структуру компании входят: девелоперская компания, собственное проектное бюро, ген подрядные организации, заводы по производству строительных материалов, а также домостроительный комбинат. 
+					p В портфеле компании, в стадии реализации находятся более 30 проектов, общей площадью более 3 млн кв метров. 
+					p Залог успеха компании - профессиональная, международная команда, инновационность и технологичность в системе управления, проектирования и строительства.
+	<!-- END ABOUT -->
+
+	<!-- START SECTION STATS -->
+		.section.s-stats
+			.s-stats__inner 
+				.s-stats__img-wrapper 
+					img(src="https://hhcdn.ru/ichameleon/303154.jpg")
+				.s-stats__cards
+					+stat-card("<span class='countup' data-value='1'>0</span>", " место", "на рынке недвижимости")
+					+stat-card("<span class='countup' data-value='30'>0</span>", " тысяч", "людей живут в наших домах")
+					+stat-card("<span class='countup' data-value='3'>0</span>", " млн м²", "недвижимости в реализации")
+					+stat-card("<span class='countup' data-value='13'>0</span>", " лет", "на рынке недвижимости Узбекистана")
+	<!-- END SECTION STATS -->
+
+	<!-- START AWARDS -->
+	.section.awards#achievements
+		.awards__inner 
+			.awards__rotate-text 
+				p ДОСТИЖЕНИЯ <br> КОМПАНИИ <span>ASIA PACIFIC PROPERTY AWARDS</span>
+			.awards__content 
+				.awards__content-text 
+					p МЫ ПЕРВЫЕ СРЕДИ ДЕВЕЛОПЕРОВ УЗБЕКИСТАНА, КТО ПОЛУЧИЛ МЕЖДУНАРОДНОЕ ПРИЗВАНИЕ: <br> 9 НАГРАД ASIA PACIFIC PROPERTY AWARDS
+				.awards__content-img 
+					img(src="https://hhcdn.ru/ichameleon/303157.png")
+	<!-- END AWARDS -->
+
+
+	<!-- START SLIDER-CARD -->
+	.section.slider-card#projects
+		.container
+			.slider-card__title ПРОЕКТЫ
+			.swiper-container.slider-card__wrapper
+				.swiper-wrapper
+					.swiper-slide.slider-card__slide
+						.slider-card__img 
+							img(src="https://hhcdn.ru/ichameleon/303435.jpg")
+						.slider-card__content 
+							.slider-card__logo 
+								img(src="https://hhcdn.ru/ichameleon/303437.svg")
+							.slider-arrows.slider-card__arrows
+								.slider-arrow.slider-arrow--prev.slider-card__arrow-prev
+									+icon("left-arrow", "slider-arrow__icon")
+								.slider-arrow.slider-arrow--next.slider-card__arrow-next
+									+icon("right-arrow", "slider-arrow__icon")
+					.swiper-slide.slider-card__slide
+						.slider-card__img 
+							img(src="https://hhcdn.ru/ichameleon/303436.jpg")
+						.slider-card__content 
+							.slider-card__logo
+								img(src="https://hhcdn.ru/ichameleon/303440.svg")
+							.slider-arrows.slider-card__arrows
+								.slider-arrow.slider-arrow--prev.slider-card__arrow-prev
+									+icon("left-arrow", "slider-arrow__icon")
+								.slider-arrow.slider-arrow--next.slider-card__arrow-next
+									+icon("right-arrow", "slider-arrow__icon")
+					.swiper-slide.slider-card__slide
+						.slider-card__img 
+							img(src="https://hhcdn.ru/ichameleon/303443.jpg")
+						.slider-card__content 
+							.slider-card__logo
+								img(src="https://hhcdn.ru/ichameleon/303438.svg")
+							.slider-arrows.slider-card__arrows
+								.slider-arrow.slider-arrow--prev.slider-card__arrow-prev
+									+icon("left-arrow", "slider-arrow__icon")
+								.slider-arrow.slider-arrow--next.slider-card__arrow-next
+									+icon("right-arrow", "slider-arrow__icon")
+					.swiper-slide.slider-card__slide
+						.slider-card__img 
+							img(src="https://hhcdn.ru/ichameleon/303444.jpg")
+						.slider-card__content 
+							.slider-card__logo
+								img(src="https://hhcdn.ru/ichameleon/303439.svg")
+							.slider-arrows.slider-card__arrows
+								.slider-arrow.slider-arrow--prev.slider-card__arrow-prev
+									+icon("left-arrow", "slider-arrow__icon")
+								.slider-arrow.slider-arrow--next.slider-card__arrow-next
+									+icon("right-arrow", "slider-arrow__icon")
+					.swiper-slide.slider-card__slide
+						.slider-card__img 
+							img(src="https://hhcdn.ru/ichameleon/303442.jpg")
+						.slider-card__content 
+							.slider-card__logo
+								img(src="https://hhcdn.ru/ichameleon/303441.png")
+							.slider-arrows.slider-card__arrows
+								.slider-arrow.slider-arrow--prev.slider-card__arrow-prev
+									+icon("left-arrow", "slider-arrow__icon")
+								.slider-arrow.slider-arrow--next.slider-card__arrow-next
+									+icon("right-arrow", "slider-arrow__icon")
+	<!-- END CARD-SLIDER -->
+
+	<!-- START VISION -->
+	.section.vision#vision
+		.container 
+			.vision__inner 
+				.title ВИДЕНИЕ
+				.vision__text Лидер девелоперского рынка Узбекистана, определяющий развитие отрасли.
+				.title.vision__title--mission НАША МИССИЯ
+				.vision__subtitle ПО ОТНОШЕНИЮ К РЫНКУ
+				.vision__text.vision__text--one Вместе со всей страной строим Новый Узбекистан, дорожа каждым клиентом и реализуя уникальные проекты – от массовых до премиальных.
+				.vision__subtitle ПО ОТНОШЕНИЮ К СОТРУДНИКАМ
+				.vision__text.vision__text--two Создаем команду, нацеленную на результат, гарантирующую развитие, комфортную работу и справедливое вознаграждение.
+				.vision__dots 
+					<svg xmlns="http://www.w3.org/2000/svg" width="98" height="7" viewBox="0 0 98 7" fill="none">
+						<rect width="6.51042" height="6.51042" fill="#CD742A"/>
+						<rect x="45.573" width="6.51042" height="6.51042" fill="#272727"/>
+						<rect x="91.146" width="6.51042" height="6.51042" fill="#272727"/>
+					</svg>
+	<!-- END VISION -->
+
+	<!-- START VALUES -->
+	.section.values#values
+		.container 
+			.title ЦЕННОСТИ
+			.values__inner 
+				.values__item 
+					.values__header 
+						.values__img 
+							img(src="https://hhcdn.ru/ichameleon/303151.png")
+						.values__header-title ОТВЕТСТВЕННОСТЬ <br> ЗА РЕЗУЛЬТАТ
+					.values__text 
+						p Ответственность за результат - готовность нести личную ответственность за результаты своей деятельности.  
+				.values__item 
+					.values__header 
+						.values__img 
+							img(src="https://hhcdn.ru/ichameleon/303153.png")
+						.values__header-title ИННОВАЦИИ И РАЗВИТИЕ
+					.values__text 
+						p Инновации и развитие - процесс поиска эффективных способов улучшения бизнеса, внедрение технологий и открытость к новых идеям.
+				.values__item 
+					.values__header 
+						.values__img 
+							img(src="https://hhcdn.ru/ichameleon/303152.png")
+						.values__header-title КОМАНДНОСТЬ
+					.values__text 
+						p Командность - умение эффективно взаимодействовать с коллегами, доверять и поддерживать друг друга в достижении общих целей.
+	<!-- END VALUES -->
+
+	<!-- START ATMOSPHERE -->
+	.section.atmosphere#atmosphere
+		.container
+			.atmosphere__inner 
+				.title АТМОСФЕРА
+				.atmosphere__text 
+					p Мы поддерживаем комфортную <br> деловую атмосферу
+					p Мы делаем общее дело и гордимся тем, что мы одна команда
+					p Мы развиваем наших сотрудников и поддерживаем инициативность
+	<!-- END ATMOSPHERE -->

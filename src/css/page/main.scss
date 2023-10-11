@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400');
+@import "./../assets/vars";
+@import "./../assets/keyframes";
+@import "../modules/nav";
+@import "../modules/swiper";
+
+// ENTITIES
+@include nav-module-btn($color_text);
+
+// COMMON
+.wrapper {
+	background: #E3E3E3;
+	font-family: $font_family;
+	color: $color_text;
+	font-weight: $font_weight;
+	font-size: 24px;
+	line-height: $line_height;
+	position: relative;
+	overflow: hidden;
+
+	img,
+	svg {
+		max-width: 100%;
+		max-height: 100%;
+		vertical-align: middle;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	button {
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+}
+
+.container {
+	max-width: 1130px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.default-slider {
+	width: 100%;
+}
+
+.section {
+	position: relative;
+
+	&--long {
+
+		&,
+		&-pt {
+			padding-top: 12.8%;
+		}
+
+		&,
+		&-pb {
+			padding-bottom: 12.8%;
+		}
+	}
+
+	&--medium {
+
+		&,
+		&-pt {
+			padding-top: 9.6%;
+		}
+
+		&,
+		&-pb {
+			padding-bottom: 9.6%;
+		}
+	}
+
+	&--short {
+
+		&,
+		&-pt {
+			padding-top: 4.8%;
+		}
+
+		&,
+		&-pb {
+			padding-bottom: 4.8%;
+		}
+	}
+}
+
+.text {
+	line-height: 1.5;
+}
+
+.title {
+	color: $color_primary;
+	font-size: 34px;
+	font-weight: 400;
+
+	&--centered {
+		text-align: center;
+	}
+
+	&--mb {
+		&-short {
+			margin-bottom: 30px;
+		}
+
+		&-medium {
+			margin-bottom: 48px;
+		}
+
+		&-long {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.nav {
+	display: flex;
+
+	&__item {
+		cursor: pointer;
+		color: $color_text;
+		transition: all .4s;
+		font-size: 14px;
+
+		&:hover,
+		&:focus {
+			color: $color_primary;
+		}
+
+		&+& {
+			margin-left: 40px;
+			border-left: 3px solid #000;
+			padding-left: 40px;
+		}
+
+		&--site {
+			text-decoration: underline !important;
+		}
+
+		&--mob {
+			display: none;
+		}
+	}
+}
+
+// ENTITIES
+
+// SECTIONS
+
+
+//HEADER
+.header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	padding: 40px 27px 0 0;
+	z-index: 2;
+
+	&__inner {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		line-height: 30px;
+		text-transform: uppercase;
+	}
+}
+
+// FIRST-SCREEN
+
+.first-screen {
+	padding-bottom: 286px;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__social {
+		width: 20%;
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		padding-top: 70px;
+	}
+
+	&__social-icons {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		gap: 120px;
+	}
+
+	&__social-link {
+		color: #272727;
+		font-size: 24px;
+		transition: all .4s;
+
+		&:hover,
+		&:focus {
+			color: $color_primary;
+		}
+	}
+
+	&__content {
+		height: 949px;
+		width: 90%;
+		background-image: url(https://hhcdn.ru/ichameleon/303146.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+
+	&__title {
+		position: absolute;
+		letter-spacing: 2px;
+		color: #FFF;
+		font-size: 156px;
+		font-weight: 200;
+		line-height: 190px;
+		bottom: -190px;
+		left: 64px;
+
+		& span {
+			color: #CD742A;
+		}
+	}
+}
+
+//ABOUT
+.about {
+	&__inner {
+		font-weight: 100;
+		font-style: normal;
+	}
+
+	&__title {
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	&__text {
+		font-size: 24px;
+		line-height: 36px;
+		margin-top: 48px;
+
+		& p+p {
+			margin-top: 45px;
+		}
+	}
+}
+
+// STATS
+
+.s-stats {
+	padding: 225px 0 128px;
+
+	&__inner {
+		display: flex;
+		gap: 103px;
+		flex-wrap: wrap;
+	}
+}
+
+.stat-card {
+	&__title {
+		font-size: 96px;
+		font-weight: 100;
+		line-height: 117px;
+	}
+
+	&__span {
+		color: $color_primary;
+		font-size: 40px;
+		font-weight: 100;
+		line-height: 49px;
+	}
+
+	&__text {
+		font-weight: 100;
+	}
+}
+
+// AWARDS
+
+.awards {
+	height: 878px;
+	background-color: #FFF;
+	padding: 112px 0 98px;
+
+	&__inner {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		height: 624px;
+		position: relative;
+	}
+
+	&__rotate-text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(-75px, 400px);
+
+		& p {
+			transform: rotate(-90deg);
+			width: 100%;
+			color: #CD742A;
+			font-size: 48px;
+			font-weight: 100;
+			line-height: 59px;
+			position: relative;
+
+			& span {
+				position: absolute;
+				transform: translate(10px, -10px);
+				width: 350px;
+				color: #272727;
+				font-size: 20px;
+				font-weight: 400;
+			}
+		}
+	}
+
+	&__content {
+		width: 85%;
+
+		&-text {
+			margin-bottom: 50px;
+			width: 64%;
+		}
+	}
+}
+
+// CARD-SLIDER
+
+.slider-card {
+	padding: 47px 0 98px;
+	background-color: #F2F2F2;
+
+	&__title {
+		color: #CD742A;
+		font-size: 48px;
+		font-weight: 100;
+		margin-bottom: 32px;
+	}
+
+	&__slide {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__img {
+		width: 58%;
+	}
+
+	&__content {
+		width: 42%;
+		position: relative;
+		text-align: center;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 176px;
+		height: 57px;
+		margin: 0 auto;
+	}
+
+	&__arrows {
+		display: flex;
+		position: absolute;
+		gap: 180px;
+		bottom: 0;
+		left: 24%;
+	}
+}
+
+.slider-arrow {
+	font-size: 1em;
+	width: 1.5em;
+	height: 1.5em;
+	cursor: pointer;
+	z-index: 20;
+	fill: none;
+
+	&__icon {
+		transition: all .3s;
+		fill: currentColor;
+
+		&:hover {
+			fill: #CD742A;
+		}
+	}
+}
+
+// VISION
+
+.vision {
+	background-image: url(https://hhcdn.ru/ichameleon/303155.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 759px;
+	padding-top: 88px;
+
+	&__title {
+		font-size: 34px;
+		color: $color_primary;
+		line-height: 41px;
+
+		&--mission {
+			margin-top: 32px;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 32px;
+	}
+
+	&__text {
+		margin-top: 16px;
+		font-size: 16px;
+		line-height: 20px;
+
+		&--one {
+			width: 31%;
+		}
+
+		&--two {
+			width: 31%;
+		}
+	}
+
+	&__dots {
+		margin-top: 32px;
+	}
+}
+
+// VALUES 
+
+.values {
+	padding: 88px 0;
+	background-color: #F2F2F2;
+
+	&__title {
+		color: $color_primary;
+		font-size: 34px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 56px;
+	}
+
+	&__item {
+		width: 32.8%;
+		display: flex;
+		gap: 64px;
+		flex-direction: column;
+
+		&:nth-child(1) {
+			gap: 40px;
+		}
+	}
+
+	&__img {
+		width: 78px;
+		height: 78px;
+		margin: 0 auto;
+	}
+
+	&__header {
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+
+		&-title {
+			color: $color_primary;
+			margin-top: 21px;
+		}
+	}
+
+	&__text {
+		font-size: 23px;
+		line-height: 26px;
+		letter-spacing: -1px;
+
+		& p+p {
+			margin-top: 22px;
+		}
+	}
+}
+
+// ATMOSPHERE
+
+.atmosphere {
+	background-image: url(https://hhcdn.ru/ichameleon/303156.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 764px;
+	padding: 147px 0 189px;
+
+	&__inner {
+		margin-left: 30px;
+	}
+
+	&__text {
+		width: 47%;
+		margin-top: 64px;
+		line-height: 36px;
+		transition: all .4s;
+
+		& p {
+			position: relative;
+			padding-left: 44px;
+			cursor: pointer;
+
+			&::before {
+				position: absolute;
+				content: '';
+				top: 40%;
+				left: 0;
+				width: 11px;
+				height: 11px;
+				background-color: #272727;
+				transition: all .4s;
+			}
+		}
+
+		& p:hover {
+			color: $color_primary;
+
+			&::before {
+				background-color: $color_primary;
+			}
+		}
+
+		& p+p {
+			margin-top: 64px;
+		}
+	}
+}
